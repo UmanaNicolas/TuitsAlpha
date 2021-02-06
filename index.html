@@ -8,7 +8,7 @@
     <zlink rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/TuitAlpha.json"></script>
-	<script src="Build/UnityLoader.js"></script>
+	
     <script>
       var gameInstance = UnityLoader.instantiate("unityContainer", "Build/TuitAlpha.json");
     	function startup() {
@@ -25,13 +25,13 @@
 		var containerDiv = document.getElementById('containerDiv');
 		var element = document.getElementById('unityContainer');      // the element
 		
-		var widthLimitedScale = Math.floor( containerDiv.offsetWidth ) / 1500.0;
+		var widthLimitedScale = Math.floor( containerDiv.offsetWidth ) / 1280.0;
 		var heightLimitedScale = (Math.floor( window.innerHeight ) - 50) / 750.0;
 		
 		var scale = widthLimitedScale;
 		if (heightLimitedScale < scale) scale = heightLimitedScale;
 		
-		element.style.width = Math.floor(1500 * scale) + 'px';
+		element.style.width = Math.floor(1280 * scale) + 'px';
 		element.style.height = Math.floor(750 * scale) + 'px';
 		element.style.margin = "auto";
 
