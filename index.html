@@ -25,14 +25,14 @@
 		var element = document.getElementById('unityContainer');      // the element
 		
 		var widthLimitedScale = Math.floor( containerDiv.offsetWidth ) / 1920.0;
-		var heightLimitedScale = (Math.floor( window.innerHeight ) - 50) / 1080.0;
+		var heightLimitedScale = (Math.floor( window.innerHeight )) / 1080.0;
 		
 		var scale = widthLimitedScale;
 		if (heightLimitedScale < scale) scale = heightLimitedScale;
 		
 		element.style.width = Math.floor(1920* scale) + 'px'; 
 		element.style.height = Math.floor(1080 * scale) + 'px';
-		element.style.margin = "auto";
+		element.style.margin = "%";
 
 	}
     </script>
