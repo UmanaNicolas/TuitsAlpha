@@ -4,21 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Tuits</title>
-    <style>
-body {
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
-  background-color: white;
-}
-canvas {
-  background-color: red;
-}
-canvas.invisible {
-  display: none;
-}
    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.javascript"></script>
@@ -26,6 +11,38 @@ canvas.invisible {
     <script>
         var gameInstance = UnityLoader.instantiate("unityContainer", "Build/TuitAlpha.json");
     </script>
+    <style>
+    		html {
+    			background-color: #000;
+    			color: #ccc;
+    			margin: 0;
+    			padding: 0;
+    		}
+    		body {
+    			margin: auto;
+    			padding-top: 1em;
+			padding-bottom:0em;
+    			padding: 2em;
+    			padding-top: 0em;
+    			text-align: center;
+    		}
+ 
+		canvas {  
+		 width: 100%;  
+		 height: 100%;  
+		}
+		#unityContainer { margin: auto; }
+		#containerDiv {
+			object-fit: contain;
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			margin: 4em;
+			margin-top: 0em;
+			margin-bottom:.9em;
+   		}
+ 	</style>
 </head>
 <body>
 <div class="webgl-content">
