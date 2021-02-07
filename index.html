@@ -4,77 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Tuits</title>
-    //<link rel="shortcut icon" href="TemplateData/favicon.ico">
-    //<zlink rel="stylesheet" href="TemplateData/style.css">
-   <script src="Build/UnityLoader.js"></script>
-	
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("unityContainer", "Build/TuitAlpha.json");
-    	function startup() {
-		window.onresize = function() {
-			resizeGame();
-		};
-		resizeGame();
-	}
-	function resizeGame() {
-	
-		//	Ensure that the game fits within the width of its containing
-		//	div, and is shallower than the height of the containing window.
-	
-		var containerDiv = document.getElementById('containerDiv');
-		var element = document.getElementById('unityContainer');      // the element
-		
-		var widthLimitedScale = Math.floor( containerDiv.offsetWidth ) / 1500.0;
-		var heightLimitedScale = (Math.floor( window.innerHeight ) - 50) / 750.0;
-		
-		var scale = widthLimitedScale;
-		if (heightLimitedScale < scale) scale = heightLimitedScale;
-		
-		element.style.width = Math.floor(1500 * scale) + 'px'; 
-		element.style.height = Math.floor(750 * scale) + 'px';
-		element.style.margin = "auto";
-
-	}
+      UnityLoader.instantiate("unityContainer", "Build/TuitAlpha.json");
     </script>
-    <style>
-    		html {
-    			background-color: #000;
-    			color: #ccc;
-    			margin: 0;
-    			padding: 0;
-    		}
-    		body {
-    			margin: auto;
-    			padding-top: 1em;
-			padding-bottom:0em;
-    			padding: 2em;
-    			padding-top: 0em;
-    			text-align: center;
-    		}
- 
-		canvas {  
-		 width: 100%;  
-		 height: 100%;  
-		}
-		#gameContainer { margin: auto; }
-		#containerDiv {
-			object-fit: contain;
-			max-width: 100%;
-			max-height: 100%;
-			width: auto;
-			height: auto;
-			margin: 4em;
-			margin-top: 0em;
-			margin-bottom:.9em;
-   		}
- 	</style>
   </head>
- <body onload="startup();">
-  	<div id="containerDiv">
-		<div class="webgl-content">
-			<div id="unityContainer" style="width: 1500px; height: 750px; margin: auto"></div>
-		</div>
-	</div>
-	</body>
+  <body>
+    <div id="unityContainer" style="width: 1920px; height: 1080px; margin: auto"></div>
+  </body>
 </html>
-
